@@ -1,0 +1,265 @@
+@media only screen and (max-width:1220px)
+{
+    .slide-wrap
+    {
+        width: 800px;
+    }
+}
+
+@media only screen and (max-width:910px)
+{
+    .frontpage
+    {
+        width: 100%;
+        height: 130vh;
+    }
+    .bgop 
+    {
+        width: 100%;
+        height: 130vh;
+    }
+
+    .introcontent
+    {
+        width: 400px;
+        height: 400px;
+    }
+    .introline
+    {
+        width: 300px;
+    }
+
+    .DISH-CONTAINER
+    {
+        height: 70vh;
+    }
+    .slide-wrap
+    {
+        width: 600px;
+    }
+
+
+    .catercontent
+    {
+        width: 60%;
+        height: 60%;
+    }
+
+
+    .FOOTER
+    {
+        width: 100%;
+        height: 80vh;
+    }
+}    
+
+@media only screen and (max-width:615px)
+{
+    .h2 
+    {
+        font-size: 8rem;
+    }
+
+
+    .slide-wrap
+    {
+        width: 350px;
+    }
+
+    .FOOTER
+    {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .footer-nav
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .foot-nav-1
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    .foot-nav-2
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    .foot-nav-3
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    
+}    
+
+@media only screen and (max-width:540px)
+{
+
+    .frontpage
+    {
+        width: 100%;
+        height: 120vh;
+    }
+    .bgop 
+    {
+        width: 100%;
+        height: 120vh;
+    }
+
+    .h2 
+    {
+        font-size: 6rem;
+    }
+
+    .sub2 {
+
+        font-size: 2rem;
+    }
+
+
+    .subtitle
+     {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        right: 20px;
+        z-index: 1;
+        justify-content: flex-end;
+        margin-top: 450px;
+        border: 2px white none;
+    }
+
+    h3
+    {
+        font-size: 1.5rem;
+    }
+
+     .underline1
+     {
+         background-color: white;
+         width: 300px;
+         height: 2px;
+     }
+
+     .underline105
+     {
+         background-color: white;
+         width: 2px;
+         height: 78px;
+         margin-top: 6px;
+         margin-bottom: 6px;
+         position: absolute;
+         left: -6px;
+         
+     }
+
+     .underline106
+    {
+         background-color: white;
+         width: 2px;
+         height: 78px;
+         position: absolute;
+         left: 300px;
+         bottom: 9px;
+    }
+
+
+
+    .introcontent
+    {
+        width: 300px;
+        height: 600px;
+    }
+    .introline
+    {
+        width: 150px;
+    }
+
+
+
+    .FOOTER
+    {
+        width: 100%;
+        height: 150vh;
+    }
+
+    .footer-nav
+    {
+        height: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .foot-nav-1
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    .foot-nav-2
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    .foot-nav-3
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    
+}
+
+@media only screen and (max-width:365px)
+{
+    .slide-wrap
+    {
+        width: 300px;
+    }
+
+    .introcontent
+    {
+        width: 250px;
+        height: 700px;
+    }
+    .introline
+    {
+        width: 100px;
+    }
+}    

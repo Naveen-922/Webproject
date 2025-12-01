@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <style>
+
+    * {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    }
+
+    @font-face {
+    font-family: "Porcine-Heavy";
+    src: url("./Porcine-Heavy.ttf");
+}
+
+@font-face {
+    font-family: "OpenSans-Light";
+    src: url("./OpenSans-Light.ttf");
+}
+
+@font-face {
+    font-family: "Bolularegular";
+    src: url("./Bolularegular.otf");
+}
+
+@font-face {
+    font-family: "Beyond\ Wonderland";
+    src: url("./Beyond\ Wonderland.ttf");
+}
+
+@font-face {
+    font-family: "COILED";
+    src: url("./COILED.TTF");
+}
+
+@font-face {
+    font-family: "anakatrinatan";
+    src: url("./anakatrinatan.ttf");
+}
+
+
+/* body
+{
+    background-image: url(./Menubg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+} */
+
+    nav
+    {
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+    }
+
+    .tp {    
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    position: sticky;
+    margin-top: 0px;
+    z-index: 1;
+    background-color: rgb(85, 0, 0);
+    }
+
+    h1 {
+    color: rgb(255, 255, 255);
+    padding-left: 20px;
+    padding-top: 20px;
+    font-family: "Porcine-Heavy";
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    }
+
+    .bar {
+    /* list-style-image: url("./menu.png"); */
+    padding-right: 20px;
+    padding-top: 20px;
+    }
+
+    .bar img:hover {
+    width: 39px;
+    height: 39px;
+    transition-duration: 200ms;
+    transition-timing-function:linear;
+    /* border-radius: 10px;
+    border: 2px solid white; */
+    }
+
+
+
+   .BG
+   { 
+     width: 100%;
+     height: auto;
+     background-image: url(./Menubg.jpg);
+     background-size: 100%;
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+   }
+
+    .MENU
+    {  
+        margin-top: 100px;
+        width: 80%;
+        height: auto;
+        background-color: white;
+    }
+
+    .menutitle
+    {
+        text-align: center;
+        font-size: 3.5rem;
+        font-family: "anakatrinatan";
+        color: white;
+        font-weight: 600;
+        letter-spacing: 4px;
+        word-spacing: 10px;
+        text-transform: uppercase;
+        text-shadow: 4px 8px 6px rgba(0, 0, 0, 0.25);
+        /* background-color: black; */
+        background-image: url(./menutitlebg1.jpg);
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-content
+    {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        row-gap: 25px;
+    }
+
+    .content
+    {
+        width: 100%;
+        height: auto;
+        border: 2px none;
+        
+    }
+    
+    .main
+    {
+        text-align: center;
+        font-size: 5rem;
+        font-family: "anakatrinatan";
+        color: rgb(0, 0, 50);
+        font-weight: 550;
+    }
+
+    .main>a{
+        text-decoration: none;
+        color: rgb(0, 0, 50);
+    }
+
+    abbr
+    {
+        text-decoration: none;
+    }
+
+    .side
+    {
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: "anakatrinatan";
+        color: rgb(0, 0, 50);
+        text-transform: capitalize;
+    }
+
+    .side-p
+    {
+        text-align: center;
+        font-size: 1.7rem;
+        font-family: "anakatrinatan";
+        color: rgb(0, 0, 50);
+        text-transform:uppercase;
+        text-decoration: dotted;
+    }
+
+    a:visited
+    {
+        color: rgb(0, 0, 50);
+        text-decoration: none;
+    }
+
+    /* .line
+    {
+        height: 2px;
+        border: 2px dotted  rgb(0, 0, 129)  ;
+        width: 20%;
+        background-color: rgb(0, 0, 129) ;
+    } */
+
+
+    .break-cont
+        {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            column-gap: 15px;
+        }
+
+    .boxes
+        {
+            width: 1000px;
+            height: 200px;
+            background-color: rgb(255, 255, 255);
+            border-bottom: 1px dashed black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+    .break-img
+        {
+            width: 160px;
+            height: 160px;
+            background-color: rgba(255, 0, 0, 0.5);
+            border-radius: 5px;
+            /* box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.2); */
+        }
+
+    .break-img > img
+        {
+            aspect-ratio: 1/1;
+            width: 160px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+    .dish-name
+        {
+            font-family: "anakatrinatan";
+            font-weight: bold;
+            font-size: larger;
+            font-size: 1.5rem;
+            margin-bottom: 0;
+            overflow: hidden;
+            text-transform: capitalize;
+        }
+
+    .dish-cont
+        {
+            font-family: "anakatrinatan";
+            overflow: hidden;
+            height: 50px;
+            width: 500px;
+        
+        }    
+
+    .prize
+        {
+            font-family: "anakatrinatan";
+            text-align: right;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: bolder;
+        }    
+
+    
+.FOOTER
+{
+    width: 100%;
+    height: 50vh;
+    margin-top: 5px;
+    background-color: #588157 ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-nav
+{
+    height: 70%;
+    width: 90%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.foot-nav-1
+{
+    width: 30%;
+    height: 100%;
+    border: 2px black none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.footnav1-button
+{
+    background-color: rgb(29, 169, 224);
+    font-size: 1.5rem;
+    color: white;
+    font-weight: lighter;
+    border: none;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "anakatrinatan";
+    transition: ease 1s;
+    margin-left: 15px;
+}
+
+.footnav1-p
+{
+    margin-left: 15px;
+    font-size: 1rem;
+    font-family: "OpenSans-Light";
+}    
+
+
+.foot-nav-2
+{
+    width: 30%;
+    height: 100%;
+    border: 2px black none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footnav2-title
+{
+    font-family: "COILED";
+    font-size:2rem; 
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.footnav2-p
+{
+    font-size: 1rem;
+    font-family: "OpenSans-Light";
+    text-align: center;
+}
+
+
+.foot-nav-3
+{
+    width: 30%;
+    height: 100%;
+    border: 2px black none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footnav3-img
+{
+    margin-right: 15px;
+}
+
+.footnav3-p
+{
+    font-size: 1rem;
+    font-family: "OpenSans-Light";
+    text-align: right;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.footnav3-socials
+{
+    border: 1px none;
+    padding: 20px;
+    /* /* margin-right: 15px; */
+    margin-bottom: 15px; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    column-gap: 15px;
+}
+
+.footnav1-button > a
+{
+    color: white;
+    text-decoration: none;
+}
+
+.footnav1-button > a:visited
+{
+    color: white;
+    text-decoration: none;
+}
+
+  
+
+
+
+@media only screen and (max-width:910px)
+{
+
+    .FOOTER
+    {
+        width: 100%;
+        height: 80vh;
+    }
+}    
+
+@media only screen and (max-width:615px)
+{
+
+     .main
+    {
+        text-align: center;
+        font-size: 2.5rem;
+        font-family: "anakatrinatan";
+        color: rgb(0, 0, 50);
+        font-weight: 550;
+    }
+
+     .side
+    {
+        text-align: center;
+        font-size: 1rem;
+        font-family: "anakatrinatan";
+        color: rgb(0, 0, 50);
+    }
+    
+    .FOOTER
+    {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .footer-nav
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .foot-nav-1
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    .foot-nav-2
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    .foot-nav-3
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    
+}    
+
+@media only screen and (max-width:540px)
+{
+
+    .FOOTER
+    {
+        width: 100%;
+        height: 150vh;
+    }
+
+    .footer-nav
+    {
+        height: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .foot-nav-1
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    .foot-nav-2
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    .foot-nav-3
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    
+}
+
+@media only screen and (max-width:365px)
+{
+    
+}    
+
+    </style>
+
+
+</head>
+<body>
+
+
+    <nav>
+    <div class="tp">
+        <div><h1>LUMEA</h1></div>
+        <div class="bar"><a href="./Resnav.html"><img src="./menu.png" height="38px" width="38px"></a></div>
+    </div>
+    </nav>
+
+    <section class="BG">
+    <div class="MENU">
+       
+        <div class="menutitle"><p>OUR MENU</p></div>
+
+    <div class="menu-content">
+
+        <div class="breakfast-list">
+
+          <div class="content">
+
+                <p class="main"><a href="./Breakfast-Menu1.pdf" target="_blank"><abbr title="click here to view full menu">Breakfast</abbr></a></p>
+            <p class="side">Available Monday to Friday 07:30am until 10:30am</p><br><br><p class="side-p">popular dishes</p>
+            
+
+          </div><br>    
+
+          <div class="break-cont">
+
+             <div class="boxes">
+               <div class="break-img">
+                 <img src="./menu-img/break1.jpg">
+               </div>
+               <div><br><p class="dish-name">Lumea full</p><br>
+                  <p class="dish-cont">Smoked bacon, herbed mushrooms, fried eggs and sourdough toast</p>
+               </div>
+               <div class="prize">199<br>rs</div>
+             </div>   
+
+             <div class="boxes">
+               <div class="break-img">
+                  <img src="./menu-img/break2.jpg">
+               </div>
+               <div><br><p class="dish-name">Royale with cheese</p><br>
+                  <p class="dish-cont">Sausage patty, cheese, bacon, walnut ketchup fried egg</p>
+               </div>
+               <div class="prize">249<br>rs</div>
+             </div>
+
+             <div class="boxes">
+               <div class="break-img">
+                  <img src="./menu-img/break3.jpg">
+               </div>
+               <div><br><p class="dish-name">Smoked salmon royale</p><br>
+                  <p class="dish-cont">Creme fraiche, hollandaise, fried egg</p>
+               </div>
+               <div class="prize">249<br>rs</div>
+             </div>
+
+             <div class="boxes">
+               <div class="break-img">
+                  <img src="./menu-img/break4.jpg">
+               </div>
+               <div><br><p class="dish-name">Italian royale</p><br>
+                  <p class="dish-cont">Burrata, spiced sausage, tomato, basil</p>
+               </div>
+               <div class="prize">199<br>rs</div>
+             </div>
+
+        </div>
+        </div>
+        
+        
+    
+
+            <div class="line"></div>
+
+            <div class="Lunch-list">
+
+               <div class="content">
+                  <p class="main"><a href="./Lunch 1.pdf" target="_blank"><abbr title="click here to view full menu">Lunch/Dinner</abbr></a></p>
+                  <p class="side">Available Monday to Saturday 12:00pm until 10:30pm</p><br><br><p class="side-p">popular dishes</p>
+               </div><br>
+
+            <div class="break-cont">
+
+             <div class="boxes">
+               <div class="break-img">
+                 <img src="./menu-img/lunch1.jpg">
+               </div>
+               <div><br><p class="dish-name">Beef tartare and oyster</p><br>
+                  <p class="dish-cont">Oyster mayo, sesame dressing, shiso</p>
+               </div>
+               <div class="prize">359<br>rs</div>
+             </div>   
+
+             <div class="boxes">
+               <div class="break-img">
+                  <img src="./menu-img/lunch2.jpg">
+               </div>
+               <div><br><p class="dish-name">Spiced fish</p><br>
+                  <p class="dish-cont">Roasted onion, pink peppercorn sauce</p>
+               </div>
+               <div class="prize">299<br>rs</div>
+             </div>
+
+             <div class="boxes">
+               <div class="break-img">
+                  <img src="./menu-img/lunch3.jpg">
+               </div>
+               <div><br><p class="dish-name">Salt Marsh lamb T-bone </p><br>
+                  <p class="dish-cont">Roasted miso aubergine, pickled onion, braised shoulder</p>
+               </div>
+               <div class="prize">399<br>rs</div>
+             </div>
+
+             <div class="boxes">
+               <div class="break-img">
+                  <img src="./menu-img/lunch4.jpg">
+               </div>
+               <div><br><p class="dish-name">Dairy cow burger</p><br>
+                  <p class="dish-cont">Aged dairy cow, cheese, onion, pickle, lettuce</p>
+               </div>
+               <div class="prize">259<br>rs</div>
+             </div>
+
+         </div>
+
+        </div>
+
+            <div class="line"></div>
+
+
+
+        <div class="desert-list">
+
+            <div class="content">
+                <p class="main"><a href="./Dessert-menu-1.pdf" target="_blank"><abbr title="click here to view full menu">Desserts</abbr></a></p>
+                <p class="side">Available Monday to Saturday 8:00AM until 10:30pm</p><br><br><p class="side-p">popular dishes</p>
+            </div><br>
+
+            <div class="break-cont">
+
+             <div class="boxes">
+               <div class="break-img">
+                 <img src="./menu-img/dessert1.jpg">
+               </div>
+               <div><br><p class="dish-name">Peach cobbler</p><br>
+                  <p class="dish-cont">Honey-roasted peach, toasted almonds, crispy pie dough</p>
+               </div>
+               <div class="prize">259<br>rs</div>
+             </div>   
+
+             <div class="boxes">
+               <div class="break-img">
+                  <img src="./menu-img/dessert2.jpg">
+               </div>
+               <div><br><p class="dish-name">Chelsea tart</p><br>
+                  <p class="dish-cont">Caramelised whey, milk ice cream</p>
+               </div>
+               <div class="prize">199<br>rs</div>
+             </div>
+
+             <!-- <div class="boxes">
+               <div class="break-img">
+                  <img>
+               </div>
+               <div><p class="dish-name">Lorem ipsum dolor</p>
+                  <p class="dish-cont">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+               </div>
+               <div>1000rs</div>
+             </div>
+
+             <div class="boxes">
+               <div class="break-img">
+                  <img>
+               </div>
+               <div><p class="dish-name">Lorem ipsum dolor</p>
+                  <p class="dish-cont">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+               </div>
+               <div>1000rs</div>
+             </div> -->
+
+         </div>
+        </div>    
+  
+
+     </div>
+    </div>
+    </section>
+
+
+    <section class="FOOTER">
+
+        <div class="footer-nav">
+
+         <div class="foot-nav-1">
+               <button class="footnav1-button"><a href="./ResStory.html">Our story</a></button>
+               <p class="footnav1-p">
+                <b>WE'RE OPEN</b><br>
+                Monday - Sunday<br>
+                10:00am - 11:00PM<br>
+               </p>
+         </div>
+
+         <div class="foot-nav-2">
+                <p class="footnav2-title">Come Visit Us</p>
+                <p class="footnav2-p">
+                    Experience the authentic flavors of aroud the world. Whether you dine in, order out, or plan a special event, 
+                    we are here for you.<br><br>
+                    <b>II Floor, Parimalam Complex, 161, Mettur Rd, near Kalyan Silks, Erode, Tamil Nadu 638011</b>
+                </p>    
+         </div>
+
+         <div class="foot-nav-3">
+                <img class="footnav3-img" src="./foot-nav-3img.jpg" height="90px" width="120px">
+                <p class="footnav3-p">
+                    Tel: +91-9361701119<br>
+                    +91-8015277801<br>
+                    E-mail: lumeaerode@gmail.com     
+                </p>
+                <div class="footnav3-socials">
+                     <a href="https://www.instagram.com/instagram/?hl=en" target="_blank"><img src="./instagram (1).png"></a>
+                     <a href="https://www.whatsapp.com/" target="_blank"><img src="./whatsapp (1).png"></a>
+                </div>
+         </div>
+        </div>   
+    </section>
+    
+</body>
+</html>

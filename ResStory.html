@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our story</title>
+     <style>
+
+    * {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    }
+
+    @font-face {
+    font-family: "Porcine-Heavy";
+    src: url("./Porcine-Heavy.ttf");
+}
+
+@font-face {
+    font-family: "OpenSans-Light";
+    src: url("./OpenSans-Light.ttf");
+}
+
+@font-face {
+    font-family: "Bolularegular";
+    src: url("./Bolularegular.otf");
+}
+
+@font-face {
+    font-family: "Beyond\ Wonderland";
+    src: url("./Beyond\ Wonderland.ttf");
+}
+
+@font-face {
+    font-family: "COILED";
+    src: url("./COILED.TTF");
+}
+
+@font-face {
+    font-family: "anakatrinatan";
+    src: url("./anakatrinatan.ttf");
+}
+
+
+nav
+    {
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+    }
+
+.tp {    
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    position: sticky;
+    margin-top: 0px;
+    z-index: 1;
+    background-color: rgb(85, 0, 0);
+    }
+
+h1 {
+    color: rgb(255, 255, 255);
+    padding-left: 20px;
+    padding-top: 20px;
+    font-family: "Porcine-Heavy";
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    }
+
+.bar {
+    /* list-style-image: url("./menu.png"); */
+    padding-right: 20px;
+    padding-top: 20px;
+    }
+
+.bar img:hover {
+    width: 40px;
+    height: 40px;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+    border-radius: 50%;
+    background-color: rgba(93, 0, 0, 0.329);
+    color: black;
+    }
+
+    
+.MAIN-CONTAINER
+{
+    width: 100%;
+    height: 100vh;
+    background-color:  rgb(85, 0, 0);
+    background-image: url(./Menubg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-box
+{
+    width: 75%;
+    height: 75%;
+    background-color: white;
+    border: 25px white solid;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.story-img
+{
+    width: 35%;
+    height: 100%;
+    border: 2px black none;
+}
+
+.img-story 
+{
+    height:582px;
+    width:384px;
+}    
+
+.story-content
+{
+    width: 64%;
+    height: 100%;
+    border: 2px black none;
+    font-family: "anakatrinatan";
+    text-align: center;
+    line-height: 30px;
+    /* display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around; */
+    text-transform: capitalize;
+    text-indent: 100px;
+    padding-right: 5px;
+    margin-top: 25px;
+}
+
+h3
+{
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+
+
+.FOOTER
+{
+    width: 100%;
+    height: 50vh;
+    /* margin-top: 5px; */
+    background-color: #588157 ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-nav
+{
+    height: 70%;
+    width: 90%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.foot-nav-1
+{
+    width: 30%;
+    height: 100%;
+    border: 2px black none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.footnav1-button
+{
+    background-color: rgb(29, 169, 224);
+    font-size: 1.5rem;
+    color: white;
+    font-weight: lighter;
+    border: none;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "anakatrinatan";
+    transition: ease 1s;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.footnav1-p
+{
+    margin-left: 15px;
+    font-size: 1rem;
+    font-family: "OpenSans-Light";
+}    
+
+
+.foot-nav-2
+{
+    width: 30%;
+    height: 100%;
+    border: 2px black none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footnav2-title
+{
+    font-family: "COILED";
+    font-size:2rem; 
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.footnav2-p
+{
+    font-size: 1rem;
+    font-family: "OpenSans-Light";
+    text-align: center;
+}
+
+
+.foot-nav-3
+{
+    width: 30%;
+    height: 100%;
+    border: 2px black none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footnav3-img
+{
+    margin-right: 15px;
+}
+
+.footnav3-p
+{
+    font-size: 1rem;
+    font-family: "OpenSans-Light";
+    text-align: right;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.footnav3-socials
+{
+    border: 1px none;
+    padding: 20px;
+    /* /* margin-right: 15px; */
+    margin-bottom: 15px; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    column-gap: 15px;
+}
+
+.footnav1-button > a
+{
+    color: white;
+    text-decoration: none;
+}
+
+.footnav1-button > a:visited
+{
+    color: white;
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width:910px)
+{
+    .MAIN-CONTAINER
+    {
+         width: 100%;
+         height: 120vh;
+    }
+     .outer-box
+    {
+         width: 75%;
+         height: 95%;
+         justify-content: center;
+         align-items: center;
+    }     
+
+    .story-img
+    {
+         width: 100%;
+         height: 300px;
+        
+    }
+    .story-content
+    {
+         width: 100%;
+         height: 100%;
+    }
+    
+      .img-story 
+     {
+          height:386px;
+          width:256px;
+     }  
+    .FOOTER
+    {
+        width: 100%;
+        height: 80vh;
+    }
+}    
+
+@media only screen and (max-width:615px)
+{
+    .MAIN-CONTAINER
+    {
+         width: 100%;
+         height: 150vh;
+    }
+    .outer-box
+    {
+         width: 75%;
+         height: 95%;
+         justify-content: center;
+         align-items: center;
+    }     
+
+    .story-img
+    {
+         width: 100%;
+         height: 300px;
+        
+    }
+
+    .img-story 
+     {
+          height:290px;
+          width:190px;
+     }  
+
+    .story-content
+    {
+         width: 100%;
+         height: 100%;
+    }
+    
+    .FOOTER
+    {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .footer-nav
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .foot-nav-1
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    .foot-nav-2
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    .foot-nav-3
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    
+}    
+
+@media only screen and (max-width:540px)
+{
+      .MAIN-CONTAINER
+    {
+         width: 100%;
+         height: 170vh;
+    }
+
+    .FOOTER
+    {
+        width: 100%;
+        height: 150vh;
+    }
+
+    .footer-nav
+    {
+        height: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .foot-nav-1
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    .foot-nav-2
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    .foot-nav-3
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    
+}
+
+@media only screen and (max-width:365px)
+{
+       .MAIN-CONTAINER
+    {
+         width: 100%;
+         height: 200vh;
+    }
+
+}  
+
+
+
+
+</style>
+
+</head>
+
+<body>
+    
+     <nav>
+    <div class="tp">
+        <div><h1>LUMEA</h1></div>
+        <div class="bar"><a href="./Resnav.html"><img src="./menu.png" height="38px" width="38px"></a></div>
+    </div>
+    </nav>
+
+    <section class="MAIN-CONTAINER">
+        <div class="outer-box">
+
+            <div class="story-img"><img class="img-story" src="./Story1.png" height="582px" width="384px"></div>
+
+            <div class="story-content">
+
+                <h3>Our story</h3><br>
+                
+                After years of exploring kitchens across Europe, our chef returned home with a simple dream 
+                to share the comfort and creativity of continental cooking with Erode.That dream became Lumea, a place where good food, 
+                friendly faces, and global flavors come together. <br><br>
+                Each dish is made with care, blending European favorites with local heart.At Lumea, we believe dining should feel 
+                personal like being invited into a friends home. Every plate carries the 
+                warmth of familiar flavors, the freshness of handpicked ingredients, and the joy of sharing something made with love.<br><br>
+
+                Whether its a quiet dinner, a family gathering, or a friendly catch-up, Lumea welcomes everyone with open arms. Here, 
+                conversations flow easily, and every meal tells a story one of passion, travel, and togetherness.<br><br>
+                
+                At Lumea, its not just about dining — its about feeling at home, one meal at a time.
+            </div>
+
+        </div>
+    </section>
+
+     <section class="FOOTER">
+
+        <div class="footer-nav">
+
+         <div class="foot-nav-1">
+               <button class="footnav1-button"><a href="./ResStory.html">Our story</a></button>
+               <p class="footnav1-p">
+                <b>WE'RE OPEN</b><br>
+                Monday - Sunday<br>
+                10:00am - 11:00PM<br>
+               </p>
+         </div>
+
+         <div class="foot-nav-2">
+                <p class="footnav2-title">Come Visit Us</p>
+                <p class="footnav2-p">
+                    Experience the authentic flavors of aroud the world. Whether you dine in, order out, or plan a special event, 
+                    we are here for you.<br><br>
+                    <b>II Floor, Parimalam Complex, 161, Mettur Rd, near Kalyan Silks, Erode, Tamil Nadu 638011</b>
+                </p>    
+         </div>
+
+         <div class="foot-nav-3">
+                <img class="footnav3-img" src="./foot-nav-3img.jpg" height="90px" width="120px">
+                <p class="footnav3-p">
+                    Tel: +91-9361701119<br>
+                    +91-8015277801<br>
+                    E-mail: lumeaerode@gmail.com     
+                </p>
+                <div class="footnav3-socials">
+                     <a href="https://www.instagram.com/instagram/?hl=en" target="_blank"><img src="./instagram (1).png"></a>
+                     <a href="https://www.whatsapp.com/" target="_blank"><img src="./whatsapp (1).png"></a>
+                </div>
+         </div>
+        </div>   
+    </section>
+    
+
+</body>
+</html>

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+         <style>
+
+    * {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    }
+
+    @font-face {
+    font-family: "Porcine-Heavy";
+    src: url("./Porcine-Heavy.ttf");
+}
+
+@font-face {
+    font-family: "OpenSans-Light";
+    src: url("./OpenSans-Light.ttf");
+}
+
+@font-face {
+    font-family: "Bolularegular";
+    src: url("./Bolularegular.otf");
+}
+
+@font-face {
+    font-family: "Beyond\ Wonderland";
+    src: url("./Beyond\ Wonderland.ttf");
+}
+
+@font-face {
+    font-family: "COILED";
+    src: url("./COILED.TTF");
+}
+
+@font-face {
+    font-family: "anakatrinatan";
+    src: url("./anakatrinatan.ttf");
+}
+
+
+nav
+    {
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+    }
+
+.tp {    
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    position: sticky;
+    margin-top: 0px;
+    z-index: 1;
+    background-color: rgb(85, 0, 0);
+    }
+
+h1 {
+    color: rgb(255, 255, 255);
+    padding-left: 20px;
+    padding-top: 20px;
+    font-family: "Porcine-Heavy";
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    }
+
+.bar {
+    /* list-style-image: url("./menu.png"); */
+    padding-right: 20px;
+    padding-top: 20px;
+    }
+
+.bar img:hover {
+    width: 40px;
+    height: 40px;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+    border-radius: 50%;
+    background-color: rgba(93, 0, 0, 0.329);
+    color: black;
+    }
+
+.MAIN-RESERVE
+{
+    height: 70vh;
+    width: 100%;
+    background-image: url(./Menubg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}    
+
+.reservation
+{
+    height: 70%;
+    width: 70%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 10px solid rgb(85, 0, 0) ;
+}
+
+.info-text
+{
+    height: 20%;
+    width: 100%;
+    color: black;
+    font-family: "anakatrinatan";
+    text-transform:capitalize;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.info-1
+{
+   height: 30%;
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+input[type="text"]
+{
+    height: 30px;
+    width: 250px;
+    padding: 10px;
+    font-family: "anakatrinatan";
+    border: 1px solid black;
+    font-size: 1.2rem;
+    border-radius: 7px;
+}
+
+.info-2
+{
+   height: 30%;
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.info2-drop
+{
+    height: 50px;
+    width: 250px;
+    padding: 10px;
+    font-family: "anakatrinatan";
+    border: 1px solid black;
+    font-size: 1.2rem;
+    color: rgb(80, 80, 80);
+    border-radius: 7px;
+}
+
+input[type="time"]
+{
+    height: 30px;
+    width: 250px;
+    padding: 10px;
+    font-family: "anakatrinatan";
+    border: 1px solid black;
+    font-size: 1.2rem;
+    color: rgb(80, 80, 80);
+    border-radius: 7px;
+}
+
+input[type="date"]
+{
+    height: 30px;
+    width: 250px;
+    padding: 10px;
+    font-family: "anakatrinatan";
+    border: 1px solid black;
+    font-size: 1.2rem;
+    color: rgb(80, 80, 80);
+    border-radius: 7px;
+}
+
+.info-3
+{
+   height: 20%;
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-items: center;
+   background-color:rgb(85, 0, 0) ;
+}
+
+.info-3 > button
+{
+    height: 40px;
+    width: 250px;
+    font-family: "anakatrinatan";
+    font-size: 1.3rem;
+    color: white;
+    background-color: black;
+    border: 0px none;
+    transition: 500ms;
+    border-radius: 7px;
+}
+
+.info-3 > button:hover
+{
+    background-color:rgb(255, 255, 255) ;
+    color: black;
+}
+
+
+
+.MAIN-CATERING
+{
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    
+}
+
+.cater-video
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.cater-video > video
+{
+    
+    height:70vh;
+    width:100%;
+    object-fit: cover;
+    
+}
+
+.cater-img
+{
+    width: 100%;
+    height: 100%;
+    /* background-image: url(./caterbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    */
+    /* background-color:rgb(85, 0, 0) ; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+/* .cater-line1
+{
+    width: 100%;
+    height: 100px;
+    background-color: #588157;
+} */
+
+.catercontent
+{
+    width: 30%;
+    height: 40%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.catercontent-title
+{
+    font-family: "COILED";
+    text-align: center;
+    font-size:1.5rem; 
+    margin-top: 10px;
+    text-transform: capitalize;
+    border: 2px black none;
+}
+
+.catercontent-para
+{
+    /* font-family: "OpenSans-Light"; */
+    font-family: "anakatrinatan";
+    font-size: .8rem;
+    padding: 10px;
+    text-transform: capitalize;
+    text-align: justify;
+    text-indent: 20px;
+    /* letter-spacing: 2px; */
+    text-align: center;
+    border: 2px black none;
+}
+
+.cater-button
+{
+    background-color: black;
+    font-size: .8rem;
+    color: white;
+    font-weight: lighter;
+    padding: 8px;
+    font-family: "anakatrinatan";
+    transition: ease 1s;
+}
+
+.cater-button:hover
+{
+    background-color: rgb(175, 0, 0);
+}
+
+.cater-button > a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.cater-button > a:visited
+{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* .cater-line2
+{
+    width: 100%;
+    height: 100px;
+    background-color:  #588157;
+} */
+
+
+
+.FOOTER
+{
+    width: 100%;
+    height: 50vh;
+    /* margin-top: 5px; */
+    background-color: #588157 ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-nav
+{
+    height: 70%;
+    width: 90%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.foot-nav-1
+{
+    width: 30%;
+    height: 100%;
+    border: 2px black none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.footnav1-button
+{
+    background-color: rgb(29, 169, 224);
+    font-size: 1.5rem;
+    color: white;
+    font-weight: lighter;
+    border: none;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "anakatrinatan";
+    transition: ease 1s;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.footnav1-p
+{
+    margin-left: 15px;
+    font-size: 1rem;
+    font-family: "OpenSans-Light";
+}    
+
+
+.foot-nav-2
+{
+    width: 30%;
+    height: 100%;
+    border: 2px black none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footnav2-title
+{
+    font-family: "COILED";
+    font-size:2rem; 
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.footnav2-p
+{
+    font-size: 1rem;
+    font-family: "OpenSans-Light";
+    text-align: center;
+}
+
+
+.foot-nav-3
+{
+    width: 30%;
+    height: 100%;
+    border: 2px black none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footnav3-img
+{
+    margin-right: 15px;
+}
+
+.footnav3-p
+{
+    font-size: 1rem;
+    font-family: "OpenSans-Light";
+    text-align: right;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.footnav3-socials
+{
+    border: 1px none;
+    padding: 20px;
+    /* /* margin-right: 15px; */
+    margin-bottom: 15px; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    column-gap: 15px;
+}
+
+.footnav1-button > a
+{
+    color: white;
+    text-decoration: none;
+}
+
+.footnav1-button > a:visited
+{
+    color: white;
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width:910px)
+{
+
+    .FOOTER
+    {
+        width: 100%;
+        height: 80vh;
+    }
+}   
+ 
+@media only screen and (max-width:760px)
+{
+    .MAIN-RESERVE
+    {
+         height: 100vh;
+         width: 100%;
+    }
+
+    .catercontent
+    {
+       width: 50%;
+       height: 80%;
+    }
+
+}
+
+@media only screen and (max-width:615px)
+{
+    
+    .FOOTER
+    {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .footer-nav
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .foot-nav-1
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    .foot-nav-2
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    .foot-nav-3
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    
+}    
+
+@media only screen and (max-width:540px)
+{
+
+    .FOOTER
+    {
+        width: 100%;
+        height: 150vh;
+    }
+
+    .footer-nav
+    {
+        height: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .foot-nav-1
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    .foot-nav-2
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    .foot-nav-3
+    {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+    
+}
+
+@media only screen and (max-width:420px)
+{
+     .MAIN-RESERVE
+    {
+         height: 120vh;
+         width: 100%;
+    }
+
+    input[type="text"]
+    {
+         height: 30px;
+         width: 200px;
+         font-size: 1rem; 
+    }
+    .info2-drop
+     {
+        height: 50px;
+        width: 200px;
+        font-size: 1rem;
+     }
+
+     input[type="time"]
+     {
+        height: 30px;
+        width: 200px;
+        font-size: 1rem;
+    } 
+
+     input[type="date"]
+     {
+    height: 30px;
+    width: 200px;
+    font-size: 1rem; 
+     }
+
+     .MAIN-CATERING
+     {
+         height: 60vh;
+         width: 100%;
+    
+     }
+
+    
+    .catercontent
+    {
+       width: 50%;
+       height: 90%;
+    }
+
+}  
+
+
+</style>
+
+</head>
+
+<body>
+
+    <nav>
+    <div class="tp">
+        <div><h1>LUMEA</h1></div>
+        <div class="bar"><a href="./Resnav.html"><img src="./menu.png" height="38px" width="38px"></a></div>
+    </div>
+    </nav>
+    
+    <section class="MAIN-RESERVE">
+
+        <div class="reservation">
+
+            <div class="info-text">The largest table we can accommodate in our restaurant is 16 guests for lunch and dinner. For larger tables during breakfast 
+            timings, please contact info@LUMEArestaurant.com. For breakfast reservations, the kitchen closes at 10:45am until Midday.</div>
+
+            <div class="info-1">
+                <div class="input-1"><input type="text" name="Firstname" value="" placeholder="Enter your name"></div>
+                <div class="input-1"><input type="text" name="Number" value="" placeholder="Enter Mobile number"></div>
+            </div>
+
+            <div class="info-2">
+                <select class="info2-drop">
+                    <option hidden>Guests</option>
+                    <option>1 to 2</option>
+                    <option>1 to 4</option>
+                    <option>1 to 8</option>
+                    <option>1 to 12</option>
+                    <option>1 to 16</option>
+                </select>
+
+            <div><input type="time" name="time of reservation" value="01:00" placeholder="Time of reservation"></div>   
+            <div><input type="date" name="time of reservation" value="" placeholder="Date of reservation"></div>  
+            </div>
+
+            <div class="info-3"><button>Make Reservation</button></div>
+
+        </div>
+
+    </section>
+
+    <section class="MAIN-CATERING">
+        <div class="cater-video"><video autoplay muted loop><source src="./video.mp4"></video></div>
+
+        <div class="cater-img">
+
+        <!-- <div class="cater-line1"></div> -->
+        <div class="catercontent">
+            <p class="catercontent-title">Catering Services</p>
+            <p class="catercontent-para">Indulge in an unforgettable dining experience at Lumea Family Restaurant. Our catering 
+                services are tailored to make your special events and gatherings memorable. Let us take care of the culinary delights 
+                while you savor every moment.<br><br>
+                <b>Contact us today on WhatsApp or phone to discuss your catering needs!</b></p>
+            <button class="cater-button"><a href="./catering.pdf" target="_blank">learn more</a></button>    
+
+        </div>
+        <!-- <div class="cater-line2"></div> -->
+        </div>
+
+    </section>
+
+     <section class="FOOTER">
+
+        <div class="footer-nav">
+
+         <div class="foot-nav-1">
+               <button class="footnav1-button"><a href="./ResStory.html" target="_blank">Our story</a></button>
+               <p class="footnav1-p">
+                <b>WE'RE OPEN</b><br>
+                Monday - Sunday<br>
+                10:00am - 11:00PM<br>
+               </p>
+         </div>
+
+         <div class="foot-nav-2">
+                <p class="footnav2-title">Come Visit Us</p>
+                <p class="footnav2-p">
+                    Experience the authentic flavors of aroud the world. Whether you dine in, order out, or plan a special event, 
+                    we are here for you.<br><br>
+                    <b>II Floor, Parimalam Complex, 161, Mettur Rd, near Kalyan Silks, Erode, Tamil Nadu 638011</b>
+                </p>    
+         </div>
+
+         <div class="foot-nav-3">
+                <img class="footnav3-img" src="./foot-nav-3img.jpg" height="90px" width="120px">
+                <p class="footnav3-p">
+                    Tel: +91-9361701119<br>
+                    +91-8015277801<br>
+                    E-mail: lumeaerode@gmail.com     
+                </p>
+                <div class="footnav3-socials">
+                     <a href="https://www.instagram.com/instagram/?hl=en" target="_blank"><img src="./instagram (1).png"></a>
+                     <a href="https://www.whatsapp.com/" target="_blank"><img src="./whatsapp (1).png"></a>
+                </div>
+         </div>
+        </div>   
+    </section>
+</body>
+</html>

@@ -39,36 +39,13 @@
     src: url("./Agatha.ttf");
 }
 
-/* ::-webkit-scrollbar
-{
-    background-color: black;
-}
 
-::-webkit-scrollbar-track
-{
-    background-color: rgb(255, 255, 255);
-}
-
-::-webkit-scrollbar-thumb
-{
-    background-color: black;
-    border: 2px solid white;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover
-{
-    background-color: rgb(90, 0, 0);
-    border: 2px solid white;
-    border-radius: 5px;
-} */
 
 body {
     background-image: url("./bg3.jpg");
-    background-size: 100% auto;
-    /* background-position: center; */
+    background-size: 100%;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    /* background-attachment:local; */
     object-fit: cover;
     position: relative;
     animation: slideshow-animation 25s;
@@ -76,19 +53,9 @@ body {
     animation-delay: 7s;
     animation-play-state: running;
     animation-iteration-count: infinite;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-
-/* @keyframes slideshow-animation {
-      0% {
-        background-image: url("./bg3.jpg");
-      }
-      50%{
-        background-image: url("./bg4.jpg");
-      }
-      100% {
-        background-image: url("./bg3.jpg");
-      }
-    } */
 
     
 .frontpage
@@ -105,7 +72,7 @@ body {
     background-color: black;
     opacity: 69%;
     position: absolute;
-    display: block;
+    /* display: block; */
     z-index: -1;
 }
 
@@ -256,7 +223,7 @@ h3 > a:visited
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-     width: 400px;
+     width: auto;
 }
 
 .underline1
@@ -370,7 +337,6 @@ h4 > a:visited
   background-repeat: no-repeat;
   display: flex;
   flex-wrap: wrap ;
-  justify-content: center;
   align-content: center;
   justify-content: space-evenly;
   position: relative;
@@ -380,87 +346,7 @@ h4 > a:visited
   animation-delay: 1s; */
 }
 
-/* @keyframes introanimate
-{
-    0%
-    {
-       .introimg
-       {
-          position: relative; 
-       }
-       .imgcontent
-       {
-         position: relative;
-       }
-       .waterwaves
-       {
-         position: relative;
-       }
-    }
-    25%
-    {
-        .introimg
-       {
-          position: absolute; 
-          top: 40%;
-          left: 20%;
-       }
-       .imgcontent
-       {
-         position: absolute;
-         top: 50%;
-         left: 50%;
-       }
-       .waterwaves
-       {
-         position: absolute;
-         top: 30%;
-         right: 20%;
-       }
-    }
-     50%
-    {
-        .introimg
-       {
-          position: absolute; 
-          top: 40%;
-          left: 20%;
-       }
-       .imgcontent
-       {
-         position: absolute;
-         top: 50%;
-         left: 50%;
-       }
-       .waterwaves
-       {
-         position: absolute;
-         top: 30%;
-         right: 20%;
-       }
-    }
-     100%
-    {
-        .introimg
-       {
-          position: absolute; 
-          top: 40%;
-          left: 20%;
-       }
-       .imgcontent
-       {
-         position: absolute;
-         top: 50%;
-         left: 50%;
-       }
-       .waterwaves
-       {
-         position: absolute;
-         top: 30%;
-         right: 20%;
-       }
-    }
-} */
+
 
 .introimg
 {
@@ -558,98 +444,13 @@ h6
 
 
 
-/* .DISH-CONTAINER
-{
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(255, 255, 255);
-    margin-top: 0%;
-    background-image: url(./sligebg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-bottom: 2px white none;
-    
-}
-#slide-p
-{
-    font-family: "COILED";
-    text-align: center;
-    letter-spacing: 0.005rem;
-    word-spacing: 4px;
-    font-size:2.5rem; 
-    font-weight: 400;
-    text-decoration: underline;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    padding-top: 15px;
-    text-transform: capitalize;
-    border: 2px black none;
-}
-.slide-wrap
-{
-    position: relative;
-    height: auto;
-    width: 1100px;
-    margin: auto;
-    top: 45%;
-    transform: translateY(-50%);
-}
-.slider
-{
-    display: flex;
-    flex-wrap: nowrap;
-    aspect-ratio: 16/9;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 6px 18px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-}
-.slider::-webkit-scrollbar
-{
-    display: none;
-}
-.slider img
-{
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
-}
-.slide-nav
-{
-  display: flex;
-  column-gap: 10px;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-.slide-nav a
-{
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: white;
-    opacity: .50;
-    transition: opacity ease 250ms;
-}
-.slide-nav a:hover 
-{
-    opacity: 1;
-} */
 
 
 .DISH-CONTAINER
 {
     width: 100%;
     height: 100vh;
-    /* background-color: rgb(255, 255, 255); */
     margin-top: 0%;
-    /* background-image: url(./sligebg.jpg), linear-gradient(rgba(0, 0, 0, 0.25), rgb(205, 225, 227));
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode:multiply; */
     border-bottom: 2px white none;
     display: flex;
     flex-wrap: nowrap;
@@ -663,7 +464,6 @@ h6
 
 #slide-p
 {
-    /* font-family: "COILED"; */
     font-family: "anakatrinatan";
     text-align: center;
     color: rgb(0, 0, 0);
@@ -671,9 +471,6 @@ h6
     word-spacing: 4px;
     font-size:2.25rem; 
     font-weight: 400;
-    /* text-decoration: overline 2px; */
-    /* margin-top: 15px;
-    margin-bottom: 10px; */
     padding-top: 15px;
     text-transform: capitalize;
     border: 2px rgb(255, 255, 255) none;
@@ -696,27 +493,27 @@ h6
     display: grid;
     overflow: hidden;
     border-radius: 15px;
-    /* border: 2px rgba(255, 255, 255, 0) solid; */
     border-top: 2px rgba(255, 255, 255, 0.75) solid;
     border-bottom: 2px rgba(255, 255, 255, 0.75) solid;
     background-color: rgba(255, 255, 255, 0.8);
+    contain: content;
 }
 
 .slider
-{
-    
+{ 
     display: flex;
-    width: calc(1100px * 16);
+    width: max-content;
     animation: scroll 25s linear infinite;
     animation-delay: 500ms;
-    column-gap: 15px;
-    box-shadow: 4px 4px 12px 6px rgba(0, 0, 0, 0.3);
+    gap: 15px;
     border-radius: 15px;
+    will-change: transform
 }
 
 .slider:hover
 {
     animation-play-state: paused;
+    box-shadow: 4px 4px 12px 6px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes scroll 
@@ -738,11 +535,10 @@ h6
     aspect-ratio: 16/9;
     display: flex;
     align-items: center;
-    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.146);
-    /* padding: 10px; */
     object-fit: cover;
     border-radius: 15px;
     transition: 250ms;
+    image-rendering: auto;
 }
 
 .slider > img:hover
@@ -788,11 +584,6 @@ h6
     bottom: 0px;
     width: 100%;
     height: 30vh;
-    /* background-color: rgba(0, 0, 0, 0.25);
-    background-image: url(./sligebg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: hard-light; */
     background-image: url(./coloursbg7.jpg);
     background-color:#ffffff;
     background-repeat: repeat;
@@ -1047,84 +838,6 @@ h6
     column-gap: 15px;
 }
 
-/* .footnav1-button > a
-{
-    color: white;
-    text-decoration: none;
-}
 
-.footnav1-button > a:visited
-{
-    color: white;
-    text-decoration: none;
-} */
-
-
-
-
-/* 
-.fixed-contact
-{
-    background-color: white;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    opacity: 1;
-    transition: 250ms;
-}
-
-.tact-img
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.fixed-img
-{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border: 2px solid;
-}
-
-.fixed-text
-{
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    opacity: 0;
-    border: 2px solid;
-} */
-
-/* .fixed-text:hover
-{
-    opacity: 100%;
-} */
-
-/* .fixed-contact:hover
-{
-    width: 150px;
-    border-radius: 25px;
-}
-
-.fixed-img:hover
-{
-    width: 100%;
-    height: 100%;
-    opacity: 0%;
-}
- */
 
 
